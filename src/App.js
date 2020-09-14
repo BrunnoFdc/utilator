@@ -1,9 +1,9 @@
 import React from 'react'
-import { View } from 'react-native'
+import { SplashScreen } from './ui/screens'
 
 export default function App() {
   return (
-    <View />
+    <SplashScreen />
   )
 }
 
