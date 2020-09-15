@@ -7,7 +7,7 @@ export function HairlineSeparator({ color, width }) {
     separator: {
       backgroundColor: color,
       width,
-      height: 1
+      height: StyleSheet.hairlineWidth
     }
   })
 
