@@ -7,13 +7,15 @@ export function BillItem({ id, name, value, separators }) {
   const navigation = useNavigation()
 
   function handlePress() {
-    navigation.navigate('BillDetails', { id, name, value })
+    requestAnimationFrame(() => {
+      navigation.navigate('BillDetails', { id, name, value })
+    })
   }
 
   return (
     <TouchableHighlight
-      activeOpacity={0.6}
-      underlayColor="#DDDDDD"
+      activeOpacity={0.5}
+      underlayColor="#adadad"
       onPress={handlePress}
       onShowUnderlay={separators.highlight}
       onHideUnderlay={separators.unhighlight}>
