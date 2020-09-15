@@ -11,7 +11,7 @@ export function BillDetailsScreen() {
   return (
     <Centralized style={styles.screenContainer}>
       <View style={styles.headerContainer}>
-        <Title>{name}</Title>
+        <Title color='#000'>{name}</Title>
         <HairlineSeparator width="70%"/>
         <View style={styles.actualValueContainer}>
           <Text style={styles.actualValueTitle}>Leitura atual</Text>
