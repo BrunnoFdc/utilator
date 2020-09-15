@@ -1,9 +1,14 @@
+import { useNavigation } from '@react-navigation/native'
 import React from 'react'
 import { View, Text, StyleSheet, TouchableHighlight } from 'react-native'
 
 export function BillItem({ id, name, value, separators }) {
 
-  function handlePress() {}
+  const navigation = useNavigation()
+
+  function handlePress() {
+    navigation.navigate('BillDetails', { id, name, value })
+  }
 
   return (
     <TouchableHighlight

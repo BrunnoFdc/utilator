@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from 'react'
 import { NavigationContainer } from '@react-navigation/native'
 import { createStackNavigator } from '@react-navigation/stack'
-import { DashboardScreen, SplashScreen } from './ui/screens'
+import { BillDetailsScreen, DashboardScreen, SplashScreen } from './ui/screens'
 
 const routes = [
   { name: 'Dashboard', component: DashboardScreen, headerShown: true, title: 'Utilator' },
+  { name: 'BillDetails', component: BillDetailsScreen, title: 'Detalhes da conta' }
 ]
 
 export default function App() {

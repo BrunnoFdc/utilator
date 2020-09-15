@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
-import { useNavigation } from '@react-navigation/native'
 import { View, StyleSheet, FlatList } from 'react-native'
+import { useNavigation } from '@react-navigation/native'
 import { BillItem } from '../../components/screen-specific/dashboard'
 
 const data = [
