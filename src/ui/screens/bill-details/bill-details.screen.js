@@ -12,11 +12,12 @@ export function BillDetailsScreen() {
     <Centralized style={styles.screenContainer}>
       <View style={styles.headerContainer}>
         <Title color='#000'>{name}</Title>
-        <HairlineSeparator width="70%"/>
+        <HairlineSeparator width="60%" color="#808080"/>
         <View style={styles.actualValueContainer}>
           <Text style={styles.actualValueTitle}>Leitura atual</Text>
           <Text style={styles.actualValueDisplay}>{value}</Text>
         </View>
+        
       </View>
     </Centralized>
   )
