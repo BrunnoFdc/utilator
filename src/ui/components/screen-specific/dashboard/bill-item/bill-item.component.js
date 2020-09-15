@@ -1,6 +1,6 @@
-import { useNavigation } from '@react-navigation/native'
 import React from 'react'
 import { View, Text, StyleSheet, TouchableHighlight } from 'react-native'
+import { useNavigation } from '@react-navigation/native'
 
 export function BillItem({ id, name, value, separators }) {
 
@@ -21,7 +21,7 @@ export function BillItem({ id, name, value, separators }) {
       onHideUnderlay={separators.unhighlight}>
       <View style={styles.container}>
         <Text style={styles.billName}>{name}</Text>
-        <Text>Leitura atual: {value}</Text>
+        <Text style={styles.value}>Leitura atual: {value}</Text>
       </View>
     </TouchableHighlight>
   )
@@ -38,5 +38,10 @@ const styles = StyleSheet.create({
   billName: {
     fontSize: 22,
     fontWeight: 'bold',
+  },
+  value: {
+    fontSize: 16,
+    color: '#000',
+    opacity: 0.5
   }
 })
