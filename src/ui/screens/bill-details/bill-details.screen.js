@@ -1,7 +1,7 @@
 import React from 'react'
 import { StyleSheet, Text, View } from 'react-native'
 import { useRoute } from '@react-navigation/native'
-import { Centralized, HairlineSeparator, Title } from '../../components/common'
+import { Button, Centralized, HairlineSeparator, Title } from '../../components/common'
 
 export function BillDetailsScreen() {
 
@@ -11,13 +11,18 @@ export function BillDetailsScreen() {
   return (
     <Centralized style={styles.screenContainer}>
       <View style={styles.headerContainer}>
-        <Title color='#000'>{name}</Title>
+        <Title color="#000">{name}</Title>
         <HairlineSeparator width="60%" color="#808080"/>
         <View style={styles.actualValueContainer}>
           <Text style={styles.actualValueTitle}>Leitura atual</Text>
           <Text style={styles.actualValueDisplay}>{value}</Text>
         </View>
-        
+        <Button 
+          color="#000" 
+          textColor="#FFF" 
+          style={styles.registerButton}
+          fluid
+          rounded>Nova Leitura</Button>
       </View>
     </Centralized>
   )
@@ -34,7 +39,7 @@ const styles = StyleSheet.create({
   },
   headerContainer: {
     width: '100%',
-    paddingVertical: 30,
+    padding: 12,
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
@@ -57,5 +62,8 @@ const styles = StyleSheet.create({
     letterSpacing: 8,
     fontSize: 16,
     fontWeight: '500'
+  },
+  registerButton: {
+    marginTop: 8
   }
 })
