@@ -1,11 +1,13 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { StyleSheet, Text, View } from 'react-native'
 import { useRoute } from '@react-navigation/native'
 import { Button, Centralized, HairlineSeparator, Title } from '../../components/common'
+import { NewRegistryModal } from '../../components/screen-specific/dashboard'
 
 export function BillDetailsScreen() {
 
   const route = useRoute()
+  const [newRegistryModalVisible, setNewRegistryModalVisible] = useState(false)
   const { id, name, value } = route.params
 
   return (
@@ -21,8 +23,11 @@ export function BillDetailsScreen() {
           color="#000" 
           textColor="#FFF" 
           style={styles.registerButton}
-          fluid
+          onPress={() => setNewRegistryModalVisible(true)}
           rounded>Nova Leitura</Button>
+        <NewRegistryModal 
+          visible={newRegistryModalVisible}
+          setVisible={setNewRegistryModalVisible} />
       </View>
     </Centralized>
   )
@@ -64,6 +69,8 @@ const styles = StyleSheet.create({
     fontWeight: '500'
   },
   registerButton: {
-    marginTop: 8
+    width: '50%',
+    marginTop: 8,
+    borderRadius: 4
   }
 })

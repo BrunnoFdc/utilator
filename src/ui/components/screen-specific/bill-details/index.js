@@ -1,0 +1,1 @@
+export { RegistryInput } from './registry-input/registry-input.component'
